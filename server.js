@@ -1,4 +1,6 @@
 const express = require('express');
+const flashcardRoutes = require ('./flashcards/flashcards')
+
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -7,6 +9,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(cors());
+
+app.use('/api/flashcards',flashcardRoutes)
 
 app.get('/', (req, res) => {
   res.send('Hello from MERN stack!');
