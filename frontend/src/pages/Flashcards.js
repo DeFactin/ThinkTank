@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import FlashcardDetails from "../components/FlashcardDetails"
-
+import '../FlashcardStyle.css';
 
 const Flashcards = () => {
 
