@@ -1,42 +1,29 @@
 const express = require ('express')
-const Flashcards = require('../models/flashcardsModel')
-
+const {
+    createFlashcard,
+    getFlashcard,
+    getFlashcards,
+    deleteFlashcard,
+    updateFlashcard
+} = require('../controllers/flashcardsController')
 const router = express.Router()
 
 
 //to get all flashcards
-router.get('/',(req,res)=>{
-    res.json({mssg:'GET all Flashcards'})
-})
+router.get('/',getFlashcards)
 
 //to get a single flashcard
-router.get('/:id',(res,req)=>{
-    res.json({mssg: 'GET a single flashcard'})
-})
+router.get('/:id',getFlashcard)
 
 //to post a new flashcard
-router.post('/', async (req, res) => {
-    const {title, question, answer} = req.body
-    
-    try {
-      const flashcard = await Flashcards.create({title, question, answer})
-      res.status(200).json(flashcard)
-    } catch (error) {
-      res.status(400).json({error: error.message})
-    }
-  })
+router.post('/', createFlashcard)
   
 
 //to delete a flashcard
-router.delete('/:id',(req,res)=>{
-    res.json({mssg: 'DELETE a flashcard'})
-})
+router.delete('/:id',deleteFlashcard)
 
 //to update a flashcard
-router.patch('/:id',(req,res)=>{
-    res.json({mssg: 'UPDATE a flashcard'})
-})
+router.patch('/:id',updateFlashcard)
 
 
 module.exports = router
-
