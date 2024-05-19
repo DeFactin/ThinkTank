@@ -7,7 +7,7 @@
   --error: #e7195a;
 }
 body {
-  background: #f1f1f1;
+  background: #493A5B;
   margin: 0;
   font-family: "Poppins";
 }
@@ -34,7 +34,100 @@ header a {
 
 /* homepage */
 .home {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+}
+
+.Chestimage
+{
+  margin: 20px;
+}
+
+.Heading
+{
+  margin-top: 10px;
+  color: white;
+}
+
+.custom-button {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: #955CA6;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 0.25rem;
+  width: 15%;
+  transition: background-color 0.2s, color 0.2s;
+  margin-left: 560px;
+  font-size: 17px;
+}
+
+.button {
+  margin-bottom: 50px;
+}
+
+.custom-button:hover {
+  background-color: #923095;
+  color: #ffffff;
+}
+
+.Intro-Card {
+  background-color: #F4F4F4; 
+  border-radius: 20px; 
+  width: 300px;
+  height: 380px;
+  padding: 20px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  margin-left: 50px;
+}
+
+.Intro-Card2 {
+  background-color: #F4F4F4; 
+  border-radius: 20px; 
+  width: 300px;
+  height: 380px;
+  padding: 20px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  margin:50px;
+}
+
+.Intro-Card2 p {
+  margin: 20px;
+  font-size: 16px; 
+  line-height: 1.5; 
+  color: #333;
+  text-align: justify;
+}
+
+.Intro-Card2 h3 {
+  margin-left: 10px;
+  font-size: 16px; 
+  line-height: 1.5; 
+  color: #333;
+}
+
+.Intro-Card2-Header {
+  display: flex;
+  align-items: center; /* Center vertically */
+  margin-bottom: 10px;
+}
+
+.PersonImage
+{
+  margin-right: 10px;
+}
+
+.Intro-Card p {
+  margin: 10px;
+  font-size: 16px; 
+  line-height: 1.5; 
+  color: #333;
+  text-align: justify;
+}
+
+.Wrapper {
+  display: flex;
+  align-items: center; 
+  margin-left: 70px;
 }
