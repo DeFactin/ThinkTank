@@ -1,4 +1,5 @@
 const express = require ('express')
+const Flashcards = require('../models/flashcardsModel')
 
 const router = express.Router()
 
@@ -14,9 +15,17 @@ router.get('/:id',(res,req)=>{
 })
 
 //to post a new flashcard
-router.post('/',(req,res)=>{
-    res.json({mssg: 'POST a new flashcard'})
-})
+router.post('/', async (req, res) => {
+    const {title, question, answer} = req.body
+    
+    try {
+      const flashcard = await Flashcards.create({title, question, answer})
+      res.status(200).json(flashcard)
+    } catch (error) {
+      res.status(400).json({error: error.message})
+    }
+  })
+  
 
 //to delete a flashcard
 router.delete('/:id',(req,res)=>{
