@@ -1,4 +1,5 @@
 const Quiz = require("../models/quizzesModels");
+const mongoose = require("mongoose");
 
 // GET all quizzes
 const getQuizzes = async (req, res) => {
@@ -9,10 +10,14 @@ const getQuizzes = async (req, res) => {
 }
 
 // GEt a single quiz
-const getQuiz = async (req,res) => {
+const getQuiz = async (req, res) => {
     const {id} = req.params
 
-    const quizzes = await Quiz.findById(id)
+    if(!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).json({error: 'No such quiz'})
+    }
+
+    const quiz = await Quiz.findById(id)
 
     if(!quiz) {
         return res.status(404).json({error: 'No such quiz'})
@@ -21,7 +26,7 @@ const getQuiz = async (req,res) => {
 }
 
 // create new quiz
-const createQuiz = async (eq, res) => {
+const createQuiz = async (req, res) => {
     const { title, question, answer1, answer2, answer3, answer4 } = req.body;
 
     // add doc to db
@@ -41,11 +46,51 @@ const createQuiz = async (eq, res) => {
 }
 
 // delete a quiz
+const deleteQuiz = async (req, res) => {
+  const { id } = req.params;
 
-// update a quiz
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).json({ error: "No such quiz" });
+  }
 
-module.export = {
+  const quiz = await Quiz.findOneAndDelete({ _id: id });
+
+  if (!quiz) {
+    return res.status(400).json({ error: "No such quiz" });
+  }
+
+  res.status(200).json(quiz);
+};
+
+//update a quiz
+const updateQuiz = async (req, res) => {
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).json({ error: "No such quiz" });
+  }
+
+  const quiz = await Quiz.findOneAndUpdate(
+    { _id: id },
+    {
+      ...req.body,
+    }
+  );
+
+  if (!quiz) {
+    return res.status(400).json({ error: "No such flashcard" });
+  }
+
+  res.status(200).json(quiz);
+};
+
+
+
+
+module.exports = {
     getQuizzes,
     getQuiz,
-    createQuiz
+    createQuiz,
+    deleteQuiz,
+    updateQuiz
 }
