@@ -2,9 +2,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // pages and components
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
-import Flashcards from './pages/Flashcards';
-import Quizzes from './pages/Quizzes';
+import Flashcards from './pages/Flashcards'
+import Quizzes from './pages/Quizzes'
 import NewQuiz from './pages/NewQuiz'
+import HistoryQuiz from './pages/HistoryQuiz'
 
 function App() {
   return (
@@ -25,7 +26,12 @@ function App() {
             </Route>
             <Route
               path="/quizzes"
-              element={<Quizzes/>}
+              element={<Quizzes />}
+            >
+            </Route>
+            <Route
+              path="/historyquiz"
+              element={<HistoryQuiz />}
             >
             </Route>
           </Routes>

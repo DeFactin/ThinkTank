@@ -7,9 +7,10 @@
   --error: #e7195a;
 }
 body {
-  background: #493A5B;
+  background: var(--turqouise);
   margin: 0;
   font-family: "Poppins";
+  color: #333;
 }
 
 header {
