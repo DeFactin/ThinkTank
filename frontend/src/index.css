@@ -126,11 +126,10 @@ header .title .logo {
   font-size: 17px;
 }
 
-<<<<<<< HEAD
 .custom-button:hover {
   background-color: #923095;
   color: #ffffff;
-=======
+}
 .Wrapper {
   display: flex;
   align-items: center; 
@@ -170,5 +169,4 @@ header .title .logo {
 
 .container .item a:hover {
   color: #FF9F1C;
->>>>>>> 73807b1e3aa81c49dc2b02d4b3f00f2508282532
 }
