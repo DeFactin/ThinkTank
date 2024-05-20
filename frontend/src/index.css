@@ -11,6 +11,7 @@ body {
   margin: 0;
   font-family: "Poppins";
 }
+
 header {
   background: #fff;
 }
@@ -26,7 +27,7 @@ header a {
   color: #333;
   text-decoration: none;
 }
-.pages{
+.pages {
   max-width: 1400px;
   padding: 20px;
   margin: 0 auto;
@@ -36,64 +37,46 @@ header a {
 .home {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh; 
+  padding-bottom: 50px;
 }
 
-.Chestimage
-{
-  margin: 20px;
-}
-
-.Heading
-{
+.Heading {
   margin-top: 10px;
   color: white;
 }
 
-.custom-button {
-  background-color: #ffffff;
-  border: 1px solid #000000;
-  color: #955CA6;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 0.25rem;
-  width: 15%;
-  transition: background-color 0.2s, color 0.2s;
-  margin-left: 560px;
-  font-size: 17px;
+.Wrapper {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.button {
-  margin-bottom: 50px;
-}
-
-.custom-button:hover {
-  background-color: #923095;
-  color: #ffffff;
-}
-
-.Intro-Card {
+.Intro-Card, .Intro-Card2 {
   background-color: #F4F4F4; 
   border-radius: 20px; 
   width: 300px;
   height: 380px;
   padding: 20px; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  margin-left: 50px;
-}
-
-.Intro-Card2 {
-  background-color: #F4F4F4; 
-  border-radius: 20px; 
-  width: 300px;
-  height: 380px;
-  padding: 20px; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  margin:50px;
-}
-
-.Intro-Card2 p {
   margin: 20px;
+}
+
+.Intro-Card2-Header {
+  display: flex;
+  align-items: center; /* Center vertically */
+  margin-bottom: 10px;
+}
+
+.PersonImage {
+  margin-right: 10px;
+}
+
+.Intro-Card2 p, .Intro-Card p {
+  margin: 10px;
   font-size: 16px; 
   line-height: 1.5; 
   color: #333;
@@ -107,27 +90,28 @@ header a {
   color: #333;
 }
 
-.Intro-Card2-Header {
-  display: flex;
-  align-items: center; /* Center vertically */
-  margin-bottom: 10px;
+.Chestimage {
+  margin-left: 110px;
+  margin-right: 110px;
 }
 
-.PersonImage
-{
-  margin-right: 10px;
+.button {
+  margin: 20px;
 }
 
-.Intro-Card p {
-  margin: 10px;
-  font-size: 16px; 
-  line-height: 1.5; 
-  color: #333;
-  text-align: justify;
+.custom-button {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: #955CA6;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 0.25rem;
+  width: 200px; /* Adjusted for better centering */
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 17px;
 }
 
-.Wrapper {
-  display: flex;
-  align-items: center; 
-  margin-left: 70px;
+.custom-button:hover {
+  background-color: #923095;
+  color: #ffffff;
 }
