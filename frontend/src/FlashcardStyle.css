@@ -4,6 +4,7 @@
     align-items: center; /* Center vertically */
     background-color: #f0f8f5; /* Light green background */
     padding: 50px;
+    border-radius: 20px;
 }
 
 .flashcards {
