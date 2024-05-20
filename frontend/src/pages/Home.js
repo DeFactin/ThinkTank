@@ -3,11 +3,7 @@ const Home = () => {
     return (
         <div>
             <div className="home">
-<<<<<<< HEAD
                 <h1 className="Heading">Welcome to ThinkThank</h1>
-=======
-                
->>>>>>> 7bef27d45227345cfe27ebb91439461cf48a01a6
                 <div className="Wrapper">
                     <div className="Intro-Card2">
                         <div className="Intro-Card2-Header">
