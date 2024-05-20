@@ -133,7 +133,6 @@ header .title .logo {
 .Wrapper {
   display: flex;
   align-items: center; 
-  margin-left: 70px;
 }
 
 // quizzes styles
