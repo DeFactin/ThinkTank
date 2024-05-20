@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import Flashcards from './pages/Flashcards';
+import Quizzes from './pages/Quizzes';
+import NewQuiz from './pages/NewQuiz'
 
 function App() {
   return (
@@ -20,7 +22,11 @@ function App() {
               path="/flashcards"
               element={<Flashcards />}
             >
-
+            </Route>
+            <Route
+              path="/quizzes"
+              element={<Quizzes/>}
+            >
             </Route>
           </Routes>
         </div>

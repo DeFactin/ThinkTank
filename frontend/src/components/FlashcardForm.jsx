@@ -1,6 +1,11 @@
 import { useState } from 'react'
+import { useFlashcardsContext } from '../hooks/useFlashcardsContext'
 
 const FlashcardForm = () => {
+
+
+  const { dispatch } = useFlashcardsContext()
+
   const [title, setTitle] = useState('')
   const [question, setQuestion] = useState('')
   const [answer, setAnswer] = useState('')
@@ -28,7 +33,7 @@ const FlashcardForm = () => {
       setTitle('')
       setQuestion('')
       setAnswer('')
-      console.log('new flashcard added:', json)
+      dispatch({type:'CREATE_FLASHCARD',payload:json})
     }
 
   }
@@ -51,7 +56,7 @@ const FlashcardForm = () => {
         value={question}
       />
 
-      <label>Number: </label>
+      <label>Answer: </label>
       <input 
         type="text" 
         onChange={(e) => setAnswer(e.target.value)} 

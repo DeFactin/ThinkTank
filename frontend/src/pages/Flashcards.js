@@ -1,24 +1,26 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import FlashcardDetails from "../components/FlashcardDetails"
 import '../FlashcardStyle.css';
 import FlashcardForm from "../components/FlashcardForm"
+import { useFlashcardsContext } from "../hooks/useFlashcardsContext"
+
 
 const Flashcards = () => {
 
-    const [flashcards, setFlashcards] = useState(null)
+    const { flashcards, dispatch } = useFlashcardsContext()
 
     useEffect(() => {
-        const fetchFlashcards = async () => {
+        const fetchFlascards = async () => {
             const response = await fetch('/api/flashcards')
             const json = await response.json()
 
             if (response.ok) {
-                setFlashcards(json)
+                dispatch({ type: 'SET_FLASHCARDS', payload: json })
             }
         }
 
-        fetchFlashcards()
-    }, [])
+        fetchFlascards()
+    }, [dispatch])
 
     return (
         <div>
@@ -31,7 +33,8 @@ const Flashcards = () => {
                         <FlashcardDetails flashcard={flashcard} key={flashcard._id} />
                     ))}
                 </div>
-            </div></div>
+            </div>
+        </div>
     )
 }
 
