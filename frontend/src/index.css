@@ -27,9 +27,6 @@ header a {
   color: #333;
   text-decoration: none;
 }
-<<<<<<< HEAD
-.pages {
-=======
 
 header .title {
   display: flex;
@@ -40,7 +37,6 @@ header .title .logo {
 }
 
 .pages{
->>>>>>> 7bef27d45227345cfe27ebb91439461cf48a01a6
   max-width: 1400px;
   padding: 20px;
   margin: 0 auto;
