@@ -6,7 +6,16 @@ const Navbar = () => {
     <header>
       <div className="container">
         <Link to="/">
+          <div className="title">
+          <img className="logo"
+                                src="../logo.png"
+                                alt="logo"
+                                width={50} height={50}
+                            />
           <h1>ThinkTank</h1>
+
+          </div>
+          
         </Link>
         <Link to="/Flashcards">
           <h1>Flashcards</h1>

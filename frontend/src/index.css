@@ -26,6 +26,15 @@ header a {
   color: #333;
   text-decoration: none;
 }
+
+header .title {
+  display: flex;
+}
+
+header .title .logo {
+  margin: 20px 10px;
+}
+
 .pages{
   max-width: 1400px;
   padding: 20px;

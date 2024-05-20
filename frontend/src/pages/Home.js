@@ -3,7 +3,7 @@ const Home = () => {
     return (
         <div>
             <div className="home">
-                <h1 className="Heading">ThinkTank</h1>
+                
                 <div className="Wrapper">
                     <div className="Intro-Card2">
                         <div className="Intro-Card2-Header">
