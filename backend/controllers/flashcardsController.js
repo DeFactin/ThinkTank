@@ -49,7 +49,7 @@ const deleteFlashcard = async (req, res) => {
 
     const flashcard = await Flashcards.findOneAndDelete({ _id: id })
 
-    if (!workout) {
+    if (!flashcard) {
         return res.status(400).json({ error: 'No such flashcard' })
     }
 
