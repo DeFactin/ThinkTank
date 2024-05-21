@@ -13,7 +13,6 @@ import Flashcards from './pages/Flashcards'
 import Quizzes from './pages/Quizzes'
 import NewQuiz from './pages/NewQuiz'
 import HistoryQuiz from './pages/HistoryQuiz'
->>>>>>> ec6ce16e8b5c8a141419e92365255aeb3dc3bf28
 
 function App() {
   return (
@@ -48,7 +47,6 @@ function App() {
               element={<HistoryQuiz />}
             >
             </Route>
->>>>>>> ec6ce16e8b5c8a141419e92365255aeb3dc3bf28
           </Routes>
         </div>
       </BrowserRouter>

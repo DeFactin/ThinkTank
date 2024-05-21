@@ -1,0 +1,248 @@
+
+
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    padding-bottom: 50px;
+  }
+
+  .ProfileWrapper {
+    margin:0;
+    width:96vw;
+    display: flex; 
+    justify-content: left;
+    flex-wrap: wrap;
+  }
+  
+
+.ProfileInfoHeader {
+    display: flex;
+    align-items: center; /* Center vertically */
+    margin-top: 110px;
+    margin-bottom: 10px;
+    margin-left: 240px;
+
+  }
+
+.profileInfo {
+    background-color: #CBF3F0; 
+    width: 100vw;       /* Full width of the viewport */
+    height: 25vh;       /* Quarter of the viewport height */
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+   
+  }
+
+  .profileInfo2 {
+    background-color: #F4F4F4; 
+    width: 100vw;       /* Full width of the viewport */
+    height: 25vh;       /* Quarter of the viewport height */
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+   
+  }
+
+  .name {
+    display: flex;
+    font-size: 55px;    
+  }
+
+  .userInfo{
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    margin-left: 240px;
+    margin-top: 40px;
+     
+  }
+
+  .userInfoContainer{
+    background-color: #CBF3F0;
+    border-radius: 10px; 
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding-left: 7px;
+    padding-right: 7px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 40px;
+    height: 50px;
+  }
+
+  .ProfilePicture {
+    position: absolute;
+    /* Position the image vertically in the middle */
+    top: 40%;
+    left: 12%; /* Position the image horizontally in the middle */
+    transform: translate(-50%, -50%); /* Center the image within the container */
+    border-radius: 50%; /* Maintain the circular shape */
+    width: 180px;
+    height: 180px;
+  }
+  
+  .edit-button {
+    background-color: #CBF3F0;
+    border: 1px solid #000000;
+    padding: 6px 12px;
+    margin-top: 140px;
+    margin-left: 400px;
+    border-radius: 0.25rem;
+    width: 150px; /* Adjusted for better centering */
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 17px;
+  }
+  
+  .edit-button:hover {
+    background-color: #923095;
+    color: #ffffff;
+  }
+  
+
+.profileCards {
+    background-color: #F4F4F4; 
+    border-radius: 20px; 
+    width: 300px;
+    height: 500px;
+    padding: 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin: 20px;
+  }
+
+  .yourQuizzes{
+    color:white;
+    border-radius: 30px; 
+    width: 600px;
+    height: 500px;
+    padding: 15px;
+    padding-bottom: 25px; 
+    box-shadow: 0 40px 40px rgba(0, 0, 0, 0.1); 
+    margin: 20px;
+  }
+
+  .yourQuizzes-container{
+    color: #333;
+    background-color: #F4F4F4; 
+    border-radius: 20px; 
+    border-radius: 20px; 
+    width: 500px;
+    height: 80px;
+    padding: 20px; 
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); 
+    margin: 20px;
+  }
+/*.flashPage {
+    display: flex;
+    justify-content: center; /* Center horizontally 
+    align-items: center; /* Center vertically 
+    background-color: #f0f8f5; /* Light green background 
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.flashcards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr); 
+    gap: 20px;
+    width: 100%;
+    margin: auto; /* Center horizontally 
+}
+
+.flashcard {
+    perspective: 1000px; /* Needed for 3D effect 
+}
+
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashcard-front {
+    background-color: #e8f5e9; 
+    color: #333;
+}
+
+.flashcard-back {
+    background-color: #dcedc8; 
+    color: #333;
+    transform: rotateY(180deg);
+}
+
+.flashcard.is-flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+.create {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f9f4;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom:20px;
+  }
+  
+  .create h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #555;
+  }
+  
+  .create label {
+    font-weight: normal;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .create input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .create button {
+    background-color: #FF9F1C;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create button:hover {
+    background-color: #FFBF69;
+  }
+  
+  .error {
+    color: #d32f2f;
+    margin-top: 10px;
+  }
+*/
+
