@@ -23,7 +23,7 @@ const Navbar = () => {
         <Link to="/Quizzes">
           <h1>Quizzes</h1>
         </Link>
-        <Link to="/Home">
+        <Link to="/Profile">
           <img className="UserIcon"
             src="../user.png"
             alt="User Icon"

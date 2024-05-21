@@ -6,6 +6,7 @@ import Flashcards from './pages/Flashcards'
 import Quizzes from './pages/Quizzes'
 import NewQuiz from './pages/NewQuiz'
 import HistoryQuiz from './pages/HistoryQuiz'
+import Profile from './pages/Profile'
 
 function App() {
   return (
@@ -32,6 +33,11 @@ function App() {
             <Route
               path="/historyquiz"
               element={<HistoryQuiz />}
+            >
+            </Route>
+            <Route
+              path="/profile"
+              element={<Profile />}
             >
             </Route>
           </Routes>
