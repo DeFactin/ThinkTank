@@ -8,31 +8,46 @@ const Quizzes = () => {
           <h1>Create New Quiz</h1>
         </Link>
       </div>
-      <div>
-        <Link to="/">
-          <h1>History</h1>
-        </Link>
-      </div>
-      <div>
-        <Link to="/">
-          <h1>Math</h1>
-        </Link>
-      </div>
-      <div>
-        <Link to="/">
-          <h1>Geography</h1>
-        </Link>
-      </div>
-      <div>
-        <Link to="/">
-          <h1>Language</h1>
-        </Link>
-      </div>
-      <div>
-        <Link to="/">
-          <h1>Music</h1>
-        </Link>
-      </div>
+
+      
+
+      <section className="games">
+      <h1> Play our quizzes! </h1>
+        <div className="container">
+          <div className="item">
+          <Link to="/HistoryQuiz.js">
+            <h2>History</h2>
+          </Link>
+        </div>
+        <div className="item">
+          <Link to="/">
+            <h2>Math</h2>
+          </Link>
+        </div>
+        <div className="item">
+          <Link to="/">
+            <h2>Geography</h2>
+          </Link>
+        </div>
+        <div className="item">
+          <Link to="/">
+            <h2>Language</h2>
+          </Link>
+        </div>
+        <div className="item">
+          <Link to="/">
+            <h2>Music</h2>
+          </Link>
+        </div>
+        <div className="item">
+          <Link to="/">
+            <h2>Physics</h2>
+          </Link>
+        </div>
+        </div>
+
+      </section>
+      
     </div>
   );
 };
