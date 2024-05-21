@@ -46,12 +46,12 @@
 }
 
 .flashcard-front {
-    background-color: #e8f5e9; 
+    background-color: #ffca80; 
     color: #333;
 }
 
 .flashcard-back {
-    background-color: #dcedc8; 
+    background-color: #83e2d8; 
     color: #333;
     transform: rotateY(180deg);
 }
@@ -112,3 +112,42 @@
     margin-top: 10px;
   }
   
+
+  .buttonsFlash {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Add space between buttons */
+    margin-top: 20px; /* Adjust the top margin as needed */
+    margin-bottom: 20px;
+}
+
+.buttonsFlash button {
+    width: 200px; /* Adjust the width as needed */
+    height: 60px; /* Adjust the height as needed */
+    font-size: 1.2em; /* Increase the font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none; /* Optional: Remove border */
+    background-color: #f0f0f0; /* Optional: Set background color */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.buttonsFlash button:hover h2 {
+    transform: scale(1.1); /* This makes the link 10% larger */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+    color: #FF9F1C;
+}
+
+.buttonsFlash h2 {
+    margin: 0;
+    pointer-events: none; /* Ensure text is not selectable/clickable */
+}
+
+.icon-container {
+  position: absolute;
+  bottom: 2px; /* Adjust as needed */
+  right: 10px;  /* Adjust as needed */
+  cursor: pointer; /* Optional: Change cursor to pointer to indicate clickable icon */
+}
