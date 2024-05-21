@@ -27,23 +27,27 @@ const getQuiz = async (req, res) => {
 
 // create new quiz
 const createQuiz = async (req, res) => {
-    const { title, question, answer1, answer2, answer3, answer4 } = req.body;
+  const { title, questions } = req.body; // assuming questions is an array of question objects
 
-    // add doc to db
-    try {
-      const quiz = await Quiz.create({
-        title,
-        question,
-        answer1,
-        answer2,
-        answer3,
-        answer4,
-      });
-      res.status(200).json(quiz);
-    } catch (error) {
-      res.status(400).json({ error: error.message });
-    }
-}
+  // Validate that questions is an array and has at least one question
+  if (!Array.isArray(questions) || questions.length === 0) {
+    return res
+      .status(400)
+      .json({ error: "At least one question is required." });
+  }
+
+  // add doc to db
+  try {
+    const quiz = await Quiz.create({
+      title,
+      questions, // save the array of questions
+    });
+    res.status(200).json(quiz);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
 
 // delete a quiz
 const deleteQuiz = async (req, res) => {

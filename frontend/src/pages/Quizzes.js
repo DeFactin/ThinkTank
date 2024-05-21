@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import QuizForm from "../components/QuizForm";
 
 const Quizzes = () => {
   return (
     <div className="mainDiv">
       <div>
-        <QuizForm/>
+        <Link to="/NewQuiz">
+          <h1>Create New Quiz</h1>
+        </Link>
       </div>
       <div>
         <Link to="/">

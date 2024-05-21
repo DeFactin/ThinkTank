@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // pages and components
-import Home from './pages/Home'
-import Navbar from './components/Navbar'
-import Flashcards from './pages/Flashcards';
-import Quizzes from './pages/Quizzes';
-import NewQuiz from './pages/NewQuiz'
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
+import Flashcards from "./pages/Flashcards";
+import Quizzes from "./pages/Quizzes";
+import NewQuiz from "./pages/NewQuiz";
 
 function App() {
   return (
@@ -13,21 +13,10 @@ function App() {
         <Navbar />
         <div className="pages">
           <Routes>
-            <Route
-              path="/"
-              element={<Home />}
-            >
-            </Route>
-            <Route
-              path="/flashcards"
-              element={<Flashcards />}
-            >
-            </Route>
-            <Route
-              path="/quizzes"
-              element={<Quizzes/>}
-            >
-            </Route>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/flashcards" element={<Flashcards />}></Route>
+            <Route path="/quizzes" element={<Quizzes />}></Route>
+            <Route path="/newquiz" element={<NewQuiz />}></Route>
           </Routes>
         </div>
       </BrowserRouter>

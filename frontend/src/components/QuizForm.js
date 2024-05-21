@@ -2,17 +2,50 @@ import { useState } from "react";
 
 const QuizForm = () => {
   const [title, setTitle] = useState("");
-  const [question, setQuestion] = useState("");
-  const [answer1, setAnswer1] = useState("");
-  const [answer2, setAnswer2] = useState("");
-  const [answer3, setAnswer3] = useState("");
-  const [answer4, setAnswer4] = useState("");
+  const [question1, setQuestion1] = useState({
+    questionText: "",
+    answer1: "",
+    answer2: "",
+    answer3: "",
+    answer4: "",
+  });
+  const [question2, setQuestion2] = useState({
+    questionText: "",
+    answer1: "",
+    answer2: "",
+    answer3: "",
+    answer4: "",
+  });
+  const [question3, setQuestion3] = useState({
+    questionText: "",
+    answer1: "",
+    answer2: "",
+    answer3: "",
+    answer4: "",
+  });
+  const [question4, setQuestion4] = useState({
+    questionText: "",
+    answer1: "",
+    answer2: "",
+    answer3: "",
+    answer4: "",
+  });
+  const [question5, setQuestion5] = useState({
+    questionText: "",
+    answer1: "",
+    answer2: "",
+    answer3: "",
+    answer4: "",
+  });
   const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const quiz = { title, question, answer1, answer2, answer3, answer4};
+    const quiz = {
+      title,
+      questions: [question1, question2, question3, question4, question5],
+    };
 
     const response = await fetch("/api/quizzes", {
       method: "POST",
@@ -25,22 +58,59 @@ const QuizForm = () => {
 
     if (!response.ok) {
       setError(json.error);
-    }
-    if (response.ok) {
+    } else {
       setError(null);
       setTitle("");
-      setQuestion("");
-      setAnswer1("");
-      setAnswer2("");
-      setAnswer3("");
-      setAnswer4("");
+      setQuestion1({
+        questionText: "",
+        answer1: "",
+        answer2: "",
+        answer3: "",
+        answer4: "",
+      });
+      setQuestion2({
+        questionText: "",
+        answer1: "",
+        answer2: "",
+        answer3: "",
+        answer4: "",
+      });
+      setQuestion3({
+        questionText: "",
+        answer1: "",
+        answer2: "",
+        answer3: "",
+        answer4: "",
+      });
+      setQuestion4({
+        questionText: "",
+        answer1: "",
+        answer2: "",
+        answer3: "",
+        answer4: "",
+      });
+      setQuestion5({
+        questionText: "",
+        answer1: "",
+        answer2: "",
+        answer3: "",
+        answer4: "",
+      });
+
       console.log("new quiz added:", json);
     }
   };
 
+  const handleInputChange = (setQuestion, question, field) => (e) => {
+    setQuestion({
+      ...question,
+      [field]: e.target.value,
+    });
+  };
+
   return (
     <form className="create" onSubmit={handleSubmit}>
-      <h3>Add a New quiz</h3>
+      <h3>Add a New Quiz</h3>
 
       <label>Quiz Title:</label>
       <input
@@ -49,37 +119,175 @@ const QuizForm = () => {
         value={title}
       />
 
-      <label>Question: </label>
-      <input
-        type="text"
-        onChange={(e) => setQuestion(e.target.value)}
-        value={question}
-      />
+      <div>
+       
+        <label>Question 1:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion1, question1, "questionText")}
+          value={question1.questionText}
+        />
+        <label>A:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion1, question1, "answer1")}
+          value={question1.answer1}
+        />
+        <label>B:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion1, question1, "answer2")}
+          value={question1.answer2}
+        />
+        <label>C:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion1, question1, "answer3")}
+          value={question1.answer3}
+        />
+        <label>D:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion1, question1, "answer4")}
+          value={question1.answer4}
+        />
+      </div>
 
-      <label>A: </label>
-      <input
-        type="text"
-        onChange={(e) => setAnswer1(e.target.value)}
-        value={answer1}
-      />
-      <label>B: </label>
-      <input
-        type="text"
-        onChange={(e) => setAnswer2(e.target.value)}
-        value={answer2}
-      />
-      <label>C: </label>
-      <input
-        type="text"
-        onChange={(e) => setAnswer3(e.target.value)}
-        value={answer3}
-      />
-      <label>D: </label>
-      <input
-        type="text"
-        onChange={(e) => setAnswer4(e.target.value)}
-        value={answer4}
-      />
+      <div>
+     
+        <label>Question 2:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion2, question2, "questionText")}
+          value={question2.questionText}
+        />
+        <label>A:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion2, question2, "answer1")}
+          value={question2.answer1}
+        />
+        <label>B:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion2, question2, "answer2")}
+          value={question2.answer2}
+        />
+        <label>C:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion2, question2, "answer3")}
+          value={question2.answer3}
+        />
+        <label>D:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion2, question2, "answer4")}
+          value={question2.answer4}
+        />
+      </div>
+
+      <div>
+        
+        <label>Question 3:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion3, question3, "questionText")}
+          value={question3.questionText}
+        />
+        <label>A:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion3, question3, "answer1")}
+          value={question3.answer1}
+        />
+        <label>B:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion3, question3, "answer2")}
+          value={question3.answer2}
+        />
+        <label>C:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion3, question3, "answer3")}
+          value={question3.answer3}
+        />
+        <label>D:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion3, question3, "answer4")}
+          value={question3.answer4}
+        />
+      </div>
+
+      <div>
+    
+        <label>Question 4:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion4, question4, "questionText")}
+          value={question4.questionText}
+        />
+        <label>A:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion4, question4, "answer1")}
+          value={question4.answer1}
+        />
+        <label>B:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion4, question4, "answer2")}
+          value={question4.answer2}
+        />
+        <label>C:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion4, question4, "answer3")}
+          value={question4.answer3}
+        />
+        <label>D:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion4, question4, "answer4")}
+          value={question4.answer4}
+        />
+      </div>
+
+      <div>
+        
+        <label>Question 5:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion5, question5, "questionText")}
+          value={question5.questionText}
+        />
+        <label>A:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion5, question5, "answer1")}
+          value={question5.answer1}
+        />
+        <label>B:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion5, question5, "answer2")}
+          value={question5.answer2}
+        />
+        <label>C:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion5, question5, "answer3")}
+          value={question5.answer3}
+        />
+        <label>D:</label>
+        <input
+          type="text"
+          onChange={handleInputChange(setQuestion5, question5, "answer4")}
+          value={question5.answer4}
+        />
+      </div>
 
       <button>Add quiz</button>
       {error && <div className="error">{error}</div>}
@@ -87,4 +295,4 @@ const QuizForm = () => {
   );
 };
 
-export default QuizForm
+export default QuizForm;
