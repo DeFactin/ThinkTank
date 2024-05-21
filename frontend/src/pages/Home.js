@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Home = () => {
 
     return (
@@ -36,12 +38,13 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="button">
-                    <button
-                        type="submit"
-                        className="custom-button"
-                    >
-                        Start Learning
-                    </button>
+                    <Link to="/Quizzes">
+                        <button
+                            className="custom-button"
+                        >
+                            Start Learning
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
