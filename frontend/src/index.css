@@ -5,11 +5,16 @@
 :root {
   --primary: #1aac83;
   --error: #e7195a;
+  --orange: #FF9F1C;
+  --lightOrange: #FFBF69;
+  --turqouise: #2EC4B6;
+  --teal: #CBF3F0;
 }
 body {
-  background: #493A5B;
+  background: var(--turqouise);
   margin: 0;
   font-family: "Poppins";
+  color: #333;
 }
 
 header {
@@ -23,6 +28,7 @@ header .container {
   align-items: center;
   justify-content: space-between;
 }
+
 header a {
   color: #333;
   text-decoration: none;
@@ -123,4 +129,44 @@ header .title .logo {
 .custom-button:hover {
   background-color: #923095;
   color: #ffffff;
+}
+.Wrapper {
+  display: flex;
+  align-items: center; 
+  margin-left: 70px;
+}
+
+// quizzes styles
+
+.games h1 {
+  font-size: 3em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr); 
+  gap: 20px;
+  width: 70%;
+ margin: 100px auto;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
+  font-size: 1.5em;
+  padding: 3%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container .item a {
+  text-decoration: none;
+  
+  color: #333;
+}
+
+.container .item a:hover {
+  color: #FF9F1C;
 }
