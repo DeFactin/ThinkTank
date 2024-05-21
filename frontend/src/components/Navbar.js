@@ -7,15 +7,15 @@ const Navbar = () => {
       <div className="container">
         <Link to="/">
           <div className="title">
-          <img className="logo"
-                                src="../logo.png"
-                                alt="logo"
-                                width={50} height={50}
-                            />
-          <h1>ThinkTank</h1>
+            <img className="logo"
+              src="../logo.png"
+              alt="logo"
+              width={50} height={50}
+            />
+            <h1>ThinkTank</h1>
 
           </div>
-          
+
         </Link>
         <Link to="/Flashcards">
           <h1>Flashcards</h1>
@@ -23,6 +23,11 @@ const Navbar = () => {
         <Link to="/Quizzes">
           <h1>Quizzes</h1>
         </Link>
+        <img className="UserIcon"
+          src="../user.png"
+          alt="User Icon"
+          width={45}
+        />
       </div>
     </header>
   )
