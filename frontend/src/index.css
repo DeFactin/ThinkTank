@@ -169,3 +169,8 @@ header .title .logo {
 .container .item a:hover {
   color: #FF9F1C;
 }
+
+.container a:hover {
+  transform: scale(1.1); /* This makes the link 10% larger */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}

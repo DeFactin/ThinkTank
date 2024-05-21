@@ -23,11 +23,13 @@ const Navbar = () => {
         <Link to="/Quizzes">
           <h1>Quizzes</h1>
         </Link>
-        <img className="UserIcon"
-          src="../user.png"
-          alt="User Icon"
-          width={45}
-        />
+        <Link to="/Home">
+          <img className="UserIcon"
+            src="../user.png"
+            alt="User Icon"
+            width={45}
+          />
+        </Link>
       </div>
     </header>
   )
