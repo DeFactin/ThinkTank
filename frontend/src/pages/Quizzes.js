@@ -14,7 +14,7 @@ const Quizzes = () => {
       <h1> Play our quizzes! </h1>
         <div className="container">
           <div className="item">
-          <Link to="/HistoryQuiz.js">
+          <Link to="/HistoryQuiz">
             <h2>History</h2>
           </Link>
         </div>
