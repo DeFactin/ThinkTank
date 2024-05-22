@@ -6,7 +6,7 @@ const QuizGame = () => {
 
     useEffect(() => {
         const fetchQuizzes = async () => {
-            const response = await fetch ('/api/historyquizzes')
+            const response = await fetch ('/api/quizzes')
             const json = await response.json()
 
             if (response.ok) {
@@ -17,43 +17,45 @@ const QuizGame = () => {
         fetchQuizzes()
 
     }, [])
+
+    
     return(
         <div class="quiz-container">
             <h1>History Quiz</h1>
-            <hr />
+
+            
             {quizzes && quizzes.map(quiz => (
                 <form id="quiz-form">
                 <div class="d-flex">
                 <div class="question">
-                    <p key={quiz._id}>1. {quiz.question}</p>
+                    <p key={quiz._id}> {quiz.question}</p>
                     <div class="answers">
                     <label>
-                        <input key={quiz.answer1} type="radio" name="q1" value="a" />
-                        Paris
+                        <input type="radio" name="q1" value="a" />{quiz.answer1}
+                        
                     </label>
                     <label>
-                        <input key={quiz.answer2} type="radio" name="q1" value="b" />
-                        Madrid
+                        <input type="radio" name="q2" value="b" />{quiz.answer2}
+                        
                     </label>
                     <label>
-                        <input key={quiz.answer3} type="radio" name="q1" value="c" />
-                        London
+                        <input type="radio" name="q3" value="c" />{quiz.answer3} 
+                        
                     </label>
                     <label>
-                        <input key={quiz.answer4} type="radio" name="q1" value="d" />
-                        Rome
+                        <input type="radio" name="q4" value="d" />{quiz.answer4}
                     </label>
                     </div>
                 </div>
                 
                 </div>
-                <button onClick={() => calculateScore()} type="submit" class="submit-btn">Submit</button>
+               
             </form>
 
             ))}
+
+             <button type="submit" class="submit-btn">Submit</button>
             
-  
-  <div class="result" id="result"></div>
 </div>
 
     )
@@ -61,10 +63,10 @@ const QuizGame = () => {
 
 export default QuizGame
 
-const calculateScore = () => {
+/*const calculateScore = () => {
     const quizForm = document.getElementById('quiz-form');
     const resultDiv = document.getElementById('result');
-    const correctAnswers = ['a', 'c'];
+    const correctAnswers = ['c','b','c','b','c'];
 
     quizForm.addEventListener('submit', e => {
       e.preventDefault();
@@ -88,4 +90,4 @@ const calculateScore = () => {
         resultDiv.innerHTML = `You are brilliant! Keep up! Score is ${score}/${correctAnswers.length},`;
     
     }});
-};
+};*/
