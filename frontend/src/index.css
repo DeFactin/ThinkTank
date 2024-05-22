@@ -250,27 +250,25 @@ body {
   top: -10vh; /* Adjust this value to move it upwards or downwards */
 }
 
-
-
 .quiz-container {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 }
 .quiz-container h1 {
+
   text-align: center;
   background-color: var(--orange);
   color: white;
   border-radius: 4px;
 }
 .question {
-  width:45%;
+  width: 70%;
   margin-bottom: 20px;
   background-color: #fff;
   padding:20px;
+  border-radius: 4px;
 }
-.question:nth-child(odd){
-  margin-right:5%;
-}
+
 .question p{
   font-weight: bold;
 }
@@ -315,4 +313,6 @@ input[type="radio"] {
 }
 .d-flex{
   display: flex;
+  justify-content: center;
+  align-items:center;
 }

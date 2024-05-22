@@ -42,6 +42,7 @@ const createQuiz = async (req, res) => {
       title,
       questions, // save the array of questions
     });
+      
     res.status(200).json(quiz);
   } catch (error) {
     res.status(400).json({ error: error.message });
