@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
+import { useAuthContext } from '../hooks/useAuthContext'
 
 const Navbar = () => {
+  const { user } = useAuthContext()
 
   return (
     <header>
@@ -23,13 +25,24 @@ const Navbar = () => {
         <Link to="/Quizzes">
           <h1>Quizzes</h1>
         </Link>
-        <Link to="/login">
-          <img className="UserIcon"
-            src="../user.png"
-            alt="User Icon"
-            width={45}
-          />
-        </Link>
+        {user && (
+          <div>
+            <Link to="/Profile">
+              <span>{user.email}</span>
+            </Link>
+          </div>
+        )}
+        {!user && (
+          <div>
+            <Link to="/login">
+              <img className="UserIcon"
+                src="../user.png"
+                alt="User Icon"
+                width={45}
+              />
+            </Link>
+          </div>
+        )}
       </div>
     </header>
   )
