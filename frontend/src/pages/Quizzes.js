@@ -8,13 +8,13 @@ const Quizzes = () => {
         <QuizForm/>
       </div>
 
-      
-
-      <section className="games">
+      <hr></hr>
       <h1> Play our quizzes! </h1>
+      <section className="games">
+      
         <div className="container">
           <div className="item">
-          <Link to="/HistoryQuiz.js">
+          <Link to="/HistoryQuiz">
             <h2>History</h2>
           </Link>
         </div>

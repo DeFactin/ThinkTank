@@ -138,16 +138,17 @@ header .title .logo {
 
 // quizzes styles
 
-.games h1 {
-  font-size: 3em;
+.games{
+  max-width: 70%;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(3,1fr); 
   gap: 20px;
-  width: 70%;
- margin: 100px auto;
+  margin: 100px auto;
 }
 
 .item {
@@ -163,7 +164,6 @@ header .title .logo {
 
 .container .item a {
   text-decoration: none;
-  
   color: #333;
 }
 
@@ -248,4 +248,71 @@ body {
   height: 100vh;
   position: relative;
   top: -10vh; /* Adjust this value to move it upwards or downwards */
+}
+
+
+
+.quiz-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.quiz-container h1 {
+  text-align: center;
+  background-color: var(--orange);
+  color: white;
+  border-radius: 4px;
+}
+.question {
+  width:45%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding:20px;
+}
+.question:nth-child(odd){
+  margin-right:5%;
+}
+.question p{
+  font-weight: bold;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label:not(:first-child){
+  border-top:1px solid #e0e0e0;
+}
+label {
+  padding:10px 0;
+  display: block;
+  margin-bottom: 10px;
+}
+input[type="radio"] {
+  margin-right: 10px;
+}
+.submit-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: var(--orange);
+  border: 5px solid white;
+  font-family: 'Poppins';
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: #d47f0b;
+}
+.result {
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  text-align: center;
+}
+.d-flex{
+  display: flex;
 }
