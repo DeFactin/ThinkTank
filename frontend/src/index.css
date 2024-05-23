@@ -5,12 +5,18 @@
 :root {
   --primary: #1aac83;
   --error: #e7195a;
+  --orange: #FF9F1C;
+  --lightOrange: #FFBF69;
+  --turqouise: #2EC4B6;
+  --teal: #CBF3F0;
 }
 body {
-  background: #f1f1f1;
+  background: var(--turqouise);
   margin: 0;
   font-family: "Poppins";
+  color: #333;
 }
+
 header {
   background: #fff;
 }
@@ -22,10 +28,20 @@ header .container {
   align-items: center;
   justify-content: space-between;
 }
+
 header a {
   color: #333;
   text-decoration: none;
 }
+
+header .title {
+  display: flex;
+}
+
+header .title .logo {
+  margin: 20px 10px;
+}
+
 .pages{
   max-width: 1400px;
   padding: 20px;
@@ -34,7 +50,269 @@ header a {
 
 /* homepage */
 .home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  padding-bottom: 50px;
+}
+
+.Heading {
+  margin-top: 10px;
+  color: white;
+}
+
+.Wrapper {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Intro-Card, .Intro-Card2 {
+  background-color: #F4F4F4; 
+  border-radius: 20px; 
+  width: 300px;
+  height: 380px;
+  padding: 20px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  margin: 20px;
+}
+
+.Intro-Card2-Header {
+  display: flex;
+  align-items: center; /* Center vertically */
+  margin-bottom: 10px;
+}
+
+.PersonImage {
+  margin-right: 10px;
+}
+
+.Intro-Card2 p, .Intro-Card p {
+  margin: 10px;
+  font-size: 16px; 
+  line-height: 1.5; 
+  color: #333;
+  text-align: justify;
+}
+
+.Intro-Card2 h3 {
+  margin-left: 10px;
+  font-size: 16px; 
+  line-height: 1.5; 
+  color: #333;
+}
+
+.Chestimage {
+  margin-left: 110px;
+  margin-right: 110px;
+}
+
+.button {
+  margin: 20px;
+}
+
+.custom-button {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: #955CA6;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 0.25rem;
+  width: 200px; /* Adjusted for better centering */
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 17px;
+}
+
+.custom-button:hover {
+  background-color: #923095;
+  color: #ffffff;
+}
+
+.Wrapper {
+  display: flex;
+  align-items: center; 
+}
+
+// quizzes styles
+
+.games{
+  max-width: 70%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 100px;
+  grid-template-columns: repeat(3,1fr); 
+  gap: 20px;
+  margin: 100px auto;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
+  font-size: 1.5em;
+  padding: 3%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container .item a {
+  text-decoration: none;
+  color: #333;
+}
+
+.container .item a:hover {
+  color: #FF9F1C;
+}
+
+.container a:hover {
+  transform: scale(1.1); /* This makes the link 10% larger */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+//LogIn
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.Login {
+  background-color: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.Login h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: black;
+}
+
+.Login label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: black;
+}
+
+.Login input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #955CA6;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 17px;
+}
+
+.Login button {
+  width: 200px;
+  font-weight: 600;
+  padding: 6px 12px;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+  color: #955CA6;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  margin-left: 55px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.Login button:hover {
+  background-color: #923095;
+  color: #ffffff;
+}
+
+.WraplLog
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  top: -10vh; /* Adjust this value to move it upwards or downwards */
+}
+
+.quiz-container {
+  width: 70%;
+  margin: 0 auto;
+}
+.quiz-container h1 {
+
+  text-align: center;
+  background-color: var(--orange);
+  color: white;
+  border-radius: 4px;
+}
+.question {
+  width: 70%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding:20px;
+  border-radius: 4px;
+}
+
+.question p{
+  font-weight: bold;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label:not(:first-child){
+  border-top:1px solid #e0e0e0;
+}
+label {
+  padding:10px 0;
+  display: block;
+  margin-bottom: 10px;
+}
+input[type="radio"] {
+  margin-right: 10px;
+}
+.submit-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: var(--orange);
+  border: 5px solid white;
+  font-family: 'Poppins';
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: #d47f0b;
+}
+.result {
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  text-align: center;
+}
+.d-flex{
+  display: flex;
+  justify-content: center;
+  align-items:center;
 }
