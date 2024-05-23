@@ -136,7 +136,20 @@ header .title .logo {
   align-items: center; 
 }
 
+//new quiz card
+
+.newquiz a {
+  text-size: 600px;
+  text-decoration: none;
+  color: #333;
+}
+
+ .newquiz a:hover {
+  color: #FF9F1C;
+}
+
 // quizzes styles
+
 
 .games{
   max-width: 70%;
@@ -151,7 +164,7 @@ header .title .logo {
   margin: 100px auto;
 }
 
-.item {
+.item, .newquiz{
   display: flex;
   justify-content: center;
   align-items: center;

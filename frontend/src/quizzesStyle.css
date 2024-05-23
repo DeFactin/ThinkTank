@@ -1,0 +1,16 @@
+//new quiz card
+ .newquiz {
+  height:400px;
+  width: 500px;
+  background-color: white;
+}
+.mainDiv .newquiz a {
+  text-size: 600px;
+  text-decoration: none;
+  color: #333;
+}
+
+.mainDiv .newquiz a:hover {
+  color: #FF9F1C;
+}
+

@@ -120,8 +120,10 @@ const QuizForm = () => {
       />
 
       <div>
-       
-        <label>Question 1:</label>
+        <hr></hr>
+        <label>
+          <b>Question 1:</b>
+        </label>
         <input
           type="text"
           onChange={handleInputChange(setQuestion1, question1, "questionText")}
@@ -154,8 +156,9 @@ const QuizForm = () => {
       </div>
 
       <div>
-     
-        <label>Question 2:</label>
+        <label>
+          <b>Question 2:</b>
+        </label>
         <input
           type="text"
           onChange={handleInputChange(setQuestion2, question2, "questionText")}
@@ -188,8 +191,9 @@ const QuizForm = () => {
       </div>
 
       <div>
-        
-        <label>Question 3:</label>
+        <label>
+          <b>Question 3:</b>
+        </label>
         <input
           type="text"
           onChange={handleInputChange(setQuestion3, question3, "questionText")}
@@ -222,8 +226,9 @@ const QuizForm = () => {
       </div>
 
       <div>
-    
-        <label>Question 4:</label>
+        <label>
+          <b>Question 4:</b>
+        </label>
         <input
           type="text"
           onChange={handleInputChange(setQuestion4, question4, "questionText")}
@@ -256,8 +261,9 @@ const QuizForm = () => {
       </div>
 
       <div>
-        
-        <label>Question 5:</label>
+        <label>
+          <b>Question 5:</b>
+        </label>
         <input
           type="text"
           onChange={handleInputChange(setQuestion5, question5, "questionText")}
@@ -289,7 +295,7 @@ const QuizForm = () => {
         />
       </div>
 
-      <button>Add quiz</button>
+      <button className="add">Add quiz</button>
       {error && <div className="error">{error}</div>}
     </form>
   );
