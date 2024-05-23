@@ -151,7 +151,7 @@ header .title .logo {
   margin: 100px auto;
 }
 
-.item {
+.item, .mainDiv .create {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,13 +162,28 @@ header .title .logo {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
 .container .item a {
   text-decoration: none;
+  font-weight: bold;
   color: #333;
+}
+
+.mainDiv .create {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--orange);
+  border: 4px solid white;
+  border-radius: 4px;
 }
 
 .container .item a:hover {
   color: #FF9F1C;
+}
+
+.mainDiv .create:hover {
+  background-color: var(--lightOrange)
 }
 
 .container a:hover {

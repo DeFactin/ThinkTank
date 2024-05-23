@@ -4,8 +4,8 @@ const Quizzes = () => {
   return (
     <div className="mainDiv">
       <div>
-        <Link to="/NewQuiz">
-          <h1>Create New Quiz</h1>
+        <Link to="/NewQuiz" className="create">
+          + Create New Quiz
         </Link>
       </div>
 
