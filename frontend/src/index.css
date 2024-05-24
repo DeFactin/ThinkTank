@@ -238,9 +238,8 @@ body {
   width: 200px;
   font-weight: 600;
   padding: 6px 12px;
-  background-color: #ffffff;
-  border-radius: 0.25rem;
-  color: #955CA6;
+  border-radius: 5rem;
+  color: #fff;
   font-size: 17px;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
@@ -250,7 +249,7 @@ body {
 }
 
 .Login button:hover {
-  background-color: #923095;
+  background-color: var(--lightOrange);
   color: #ffffff;
 }
 
