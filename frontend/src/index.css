@@ -115,20 +115,20 @@ header .title .logo {
 }
 
 .custom-button {
-  background-color: #ffffff;
-  border: 1px solid #000000;
-  color: #955CA6;
+  background-color: var(--orange);
+  font-family: 'Poppins';
+  border: 4px solid white;
+  color: #fff;
   font-weight: 600;
   padding: 6px 12px;
-  border-radius: 0.25rem;
+  border-radius: 5rem;
   width: 200px; /* Adjusted for better centering */
   transition: background-color 0.2s, color 0.2s;
   font-size: 17px;
 }
 
 .custom-button:hover {
-  background-color: #923095;
-  color: #ffffff;
+  background-color: var(--lightOrange);
 }
 
 .Wrapper {
