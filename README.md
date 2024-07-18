@@ -36,8 +36,7 @@ and lastly enter:
 npm run dev
 ``
 
-
-##Demo
+Demo:
 ![1](https://github.com/user-attachments/assets/d99dddc7-de61-4088-961c-1a46655e4f00)
 
 ![2](https://github.com/user-attachments/assets/ec4da584-e1c9-4a8a-a456-8bed1ab61bc7)
