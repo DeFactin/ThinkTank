@@ -7,25 +7,36 @@ For creation of the project we have used the tools of the MERN stack and for tes
 
 # Installation
 After downloading the code, first enter  
+
 ``
 npm install
 ``
+
 then, change directory to frontend
+
 ``
 cd frontend
 ``
+
 Then in the terminal enter:
+
 ``
 npm start
 ``
+
 Open another terminal and change to directory backend:
+
 ``
 cd backend
 ``
+
 and lastly enter:
+
 ``
 npm run dev
 ``
+
+
 ##Demo
 ![1](https://github.com/user-attachments/assets/d99dddc7-de61-4088-961c-1a46655e4f00)
 
